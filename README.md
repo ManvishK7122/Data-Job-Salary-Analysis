@@ -1,4 +1,4 @@
-# Datac Science Job Family Salary Analysis
+# Data Science Job Family Salary Analysis
 
 ## Introduction
 
