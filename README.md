@@ -1,2 +1,8 @@
-# Data-Job-Salary-Analysis
-Analyzing the Data Job Family through various Working conditions and Factors 
+# Datac Science Job Family Salary Analysis
+
+## Introduction
+
+### Background
+
+In 2021, Harvard Business Review wrote an article known as 
+
