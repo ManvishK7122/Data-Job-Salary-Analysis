@@ -4,5 +4,5 @@
 
 ### Background
 
-In 2021, Harvard Business Review wrote an article known as 
+In 2021, Harvard Business Review published an article titled _Data Scientist: The Sexiest Job of the 21st Century_
 
