@@ -75,3 +75,10 @@ RENAME COLUMN remote_ratio TO Remoteness
 ```
 
 - Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner.
+
+- Here is the dataset after all the data cleaning
+
+## Questions/Exploratory Data Analysis
+1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size?
+2. When looking at the different levels of experience level within our dataset, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
+3. 
