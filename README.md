@@ -4,11 +4,14 @@
 
 ### Background/Problem Statement
 
-In 2021, Harvard Business Review published an article titled _Data Scientist: The Sexiest Job of the 21st Century_. Within this article, the main topics discussed were how big data jobs and jobs within that job family will have a boom and increase in demand due to how corporations see them as valuable assets when it comes to making business decisions. Through reading this article, I wanted to conduct a personal study/project about the job family by using data of salaries given to the job family from 2020 to 2023 and seeing if the statement made by the Harvard article was true. Another objective of this study was deducing what kind of factors affected their salary(Examples: Company Size and Level of Remoteness). 
+In 2021, Harvard Business Review published an article titled _Data Scientist: The Sexiest Job of the 21st Century_. Within this article, the main topics discussed were how Big data jobs and jobs within that job family will have a boom and increase in demand due to how corporations see them as valuable assets when it comes to making business decisions. Through reading this article, I wanted to conduct a personal study/project about the job family by using data of salaries given to the job family from 2020 to 2023 and seeing if the statement made by the Harvard article was true. Another objective of this study was deducing what kind of factors affected their salary(Examples: Company Size and Level of Remoteness). 
 
 ### Fields/Factors
 
-Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, we will be using for this 
+Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, my objective is to look into 3 particular roles within the Data Science Job Family, which are
+1. Data Analyst or any non-lead/manager analyst role(Quality Analyst, Financial Data Analyst, etc.)
+2. Data Scientist or any non-lead/manager scientist role (Machine Learning, Applied Scientist, etc.)
+3. Data Engineer or any non-lead/manager Engineer Role(BI Engineer, Analyst Engineer, etc.)
 
 1. work_year: The year the salary was paid.
 experience_level: The experience level in the job during the year
