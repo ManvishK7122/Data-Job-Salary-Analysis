@@ -48,6 +48,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 - Nest Queries
 - Windows Function
 - Aggregation
+- SQL wildcard
 - Dashboard/Visualization Creation
 
 ## Data Preparation/Cleaning
@@ -78,7 +79,10 @@ RENAME COLUMN remote_ratio TO Remoteness
 
 - Here is the dataset after all the data cleaning
 
-## Questions/Exploratory Data Analysis
+
+## Data Analysis/Questions
+
+### Questions/Exploratory Data Analysis
 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size?
 2. When looking at the different levels of experience level within our job families, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
 3. Throughout the years our dataset covers, What is the general trend in terms of demand and their respective pay across our 3 job families?
@@ -86,3 +90,36 @@ RENAME COLUMN remote_ratio TO Remoteness
 5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to have the highest salaries?
    - Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average than the other types of conditions?
       - This is done for the different levels of experience/job families (Intermediate Level Scientists, Senior Level Engineers, etc.)
+
+### Interesting/Example Queries
+
+Q1: Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size? 
+
+- This query is specifically for the Analyst role.
+  
+```sql
+SELECT company_size,
+  COUNT(job_title) AS number_of_emp_company,
+  SUM(COUNT(job_title)) OVER() AS total_of_emp,
+  ROUND((COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER()),2) AS percent_total_of_emp
+FROM salary
+WHERE job_title LIKE "% Analyst" 
+GROUP BY company_size
+```
+
+Q2:When looking at the different levels of experience level within our job families, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
+- This query is done with the Scientist role
+  
+```sql
+SELECT experience_level,
+  COUNT(job_title) AS number_of_entries,
+  SUM(COUNT(job_title)) OVER() AS total_of_entries,
+  ROUND(COUNT(job_title)* 100.0/ SUM(COUNT(job_title)) OVER(),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE "% Scientist" 
+GROUP BY experience_level
+```
+
+
+
+
