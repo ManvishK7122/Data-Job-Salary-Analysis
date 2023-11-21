@@ -48,7 +48,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 - Nest Queries
 - Windows Function
 - Aggregation
-- Dashboard Creation
+- Dashboard/Visualization Creation
 
 ## Data Preparation/Cleaning
 
@@ -74,4 +74,4 @@ ALTER TABLE Salary
 RENAME COLUMN remote_ratio TO Remoteness
 ```
 
-- Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner Along with the changing o
+- Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner.
