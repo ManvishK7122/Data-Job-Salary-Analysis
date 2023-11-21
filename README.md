@@ -80,5 +80,9 @@ RENAME COLUMN remote_ratio TO Remoteness
 
 ## Questions/Exploratory Data Analysis
 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size?
-2. When looking at the different levels of experience level within our dataset, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
-3. 
+2. When looking at the different levels of experience level within our job families, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
+3. Throughout the years our dataset covers, What is the general trend in terms of demand and their respective pay across our 3 job families?
+4. Within our dataset, what are the number of individuals under each of the different levels of remoteness (Remote, Hybrid, On-site)?
+5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to have the highest salaries?
+   - Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average than the other types of conditions?
+      - This is done for the different levels of experience/job families (Intermediate Level Scientists, Senior Level Engineers, etc.)
