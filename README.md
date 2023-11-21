@@ -8,20 +8,22 @@ In 2021, Harvard Business Review published an article titled _Data Scientist: Th
 
 ### Fields/Factors
 
-Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, my objective is to look into 3 particular roles within the Data Science Job Family, which are
-1. Data Analyst or any non-lead/manager analyst role(Quality Analyst, Financial Data Analyst, etc.)
-2. Data Scientist or any non-lead/manager scientist role (Machine Learning, Applied Scientist, etc.)
-3. Data Engineer or any non-lead/manager Engineer Role(BI Engineer, Analyst Engineer, etc.)
+Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, my objective is to look into 3 specific roles within the Data Science Job Family, which are
+1. Data Analyst or any non-lead analyst role(Quality Analyst, Financial Data Analyst, etc.)
+2. Data Scientist or any non-lead scientist role (Machine Learning, Applied Scientist, etc.)
+3. Data Engineer or any non-lead engineer Role(BI Engineer, Analyst Engineer, etc.)
 
-1. work_year: The year the salary was paid.
-experience_level: The experience level in the job during the year
-employment_type: The type of employment for the role
-job_title: The role worked in during the year.
-salary: The total gross salary amount paid.
-salary_currency: The currency of the salary paid as an ISO 4217 currency code.
-salaryinusd: The salary in USD
-employee_residence: Employee's primary country of residence in during the work year as an ISO 3166 country code.
-remote_ratio: The overall amount of work done remotely
-company_location: The country of the employer's main office or contracting branch
-company_size: The median number of people that worked for the company during the year
+Along with the job roles that I will be analyzing, the fields within our dataset include:
+
+1. Work Year: The year the salary was issued.
+2. Experience Level: The experience level in the job during the hired year.(Examples: EN,MI,SE,etc.)
+3. Employment Type: The type of employment for the role. (Exam:FT,PT,etc.)
+4. Job Title: The role worked in during the year. (Example: Data Analyst, ML Engineer, etc.)
+5. Salary: The total gross salary amount paid within the company currency.
+6. Salary Currency: The currency of the salary paid. (ISO 4217 currency code)
+7. Salary in USD: The salary in USD.
+8. Employee Residence: The employee's country of residence during the work year (ISO 3166 country code)
+9. Remote Ratio/Level of Remoteness: The overall amount of work done remotely(Examples: 0,50,100)
+10. Company Location: The country of the employer's main office or contracting branch
+11. Company Size: The median number of people that worked for the company during the year
 
