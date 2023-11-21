@@ -40,7 +40,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 
 ### Tools Used
 - Excel: Data Entry
-- MYSQL: Data Cleaning pt.2 & Querying
+- MYSQL: Data Cleaning & Querying
 - Tableau: Building Interactive Dashboard
   
 ### Skills Applied
@@ -50,5 +50,28 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 - Aggregation
 - Dashboard Creation
 
-## Data Cleaning/Manipulation
+## Data Preparation/Cleaning
 
+### Data Cleaning Methods
+
+Although it wasn't relevant to the analysis of the dataset, I added a field/column in Excel numbering all the entries with id numbers. The reason behind me doing this was to be able to identify which entry in the datasets had particular values I wanted to look into, however, the entry of id numbers did not affect data analysis and queries. One of the primary concerns with the data was the readiblity of the data itself due to the abbreviation and confusing terminology without the context of the definition for the fields. To mitigate this issue, I changed the names in the field through the UPDATE function on SQL to make the data more readible to the audience. An examples of this query would include: 
+
+```sql
+UPDATE salary
+SET remote_ratio = "Remote"
+WHERE remote_ratio = "100";
+```
+
+```sql
+UPDATE salary
+SET experience_level = "Senior"
+WHERE experience_level = "SE"
+```
+I proceeded to do this process for the experience_level, remote_ratio, employment_type, and company_size fields. Along with the renaming of values within the field, I also updated the name of the remote_ratio column into Remoteness. The query looked like this:
+
+```sql
+ALTER TABLE Salary
+RENAME COLUMN remote_ratio TO Remoteness
+```
+
+- Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner Along with the changing o
