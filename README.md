@@ -192,7 +192,7 @@ AND number_of_entries >= 3
 ### Insights
 
 - When looking at the distribution of employees at different sized companies across the job families, the majority of our entries in our dataset are skewed towards individuals working in medium-sized companies with each job family having roughly 80% of their entries in that company size.
-  - Here are each of the distributions:
+  - Here are each of the distributions across company sizes
 1. Analysts
   
 | Company Size  | # of employees | Total employees | Percent Total |
