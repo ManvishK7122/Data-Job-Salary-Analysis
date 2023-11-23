@@ -85,8 +85,8 @@ RENAME COLUMN remote_ratio TO Remoteness
 ### Questions/Exploratory Data Analysis
 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size?
 2. When looking at the different levels of experience level within our job families, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
-3. Throughout the years our dataset covers, What is the general trend in terms of demand and their respective pay across our 3 job families?
-4. Within our dataset, what are the number of individuals under each of the different levels of remoteness (Remote, Hybrid, On-site)?
+3. Throughout the years our dataset covers (2020-2023), What is the general trend in terms of demand and their respective pay across our 3 job families?
+4. Within our dataset and job roles, what are the number of individuals under each of the different levels of remoteness (Remote, Hybrid, On-site)?
 5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to have the highest salaries?
    - Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average than the other types of conditions?
       - This is done for the different levels of experience/job families (Intermediate Level Scientists, Senior Level Engineers, etc.)
@@ -246,4 +246,33 @@ AND number_of_entries >= 3
 | Intermediate  | 336 | 1640 | 20.49% |
 | Large  |  1123 | 1640 | 68.48% |
 
-- 
+- In terms of the trend in the salaries and demand for individuals in the big data job field from 2020 to 2023, the average salary and maximum salary has increased over time, which means that overall demand for data jobs are increasing. Although different trends are shown across the job families, the overall trend is the increase in demand for these data jobs.
+- Here are the average, maximum, and minimum salaries at each job role
+1. Analysts
+
+| Work Year  | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- |
+| 2020  | $56,107.00 | $135,000 | $6,072 |
+| 2021  | $77,978.63 | $200,000 | $9,272 |
+| 2022  | $103,922.50 | $430,967 | $5,723 |
+| 2023  | $111,618.74 | $385,000 | $12,877 |
+
+2. Scientists
+
+| Work Year  | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- |
+| 2020  | $109,162.07 | $450,000 | $21,669 |
+| 2021  | $90,994.04 | $423,000 | $5,679 |
+| 2022  | $137,767.12 | $380,000 | $8,000 |
+| 2023  | $161,823.07 | $423,834 | $9,727 |
+
+-Something to note about the data scientist roles is that there is a slight decrease in the average salary in 2021, however, we still proceed to see the increase in average salary till 2023. 
+
+3. Engineers
+
+| Work Year  | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- |
+| 2020  | $85,916.26 | $250,000 | $21,669 |
+| 2021  | $90,031.4 | $276,000 | $5,679 |
+| 2022  | $139,642.03 | $375,000 | $8,000 |
+| 2023  | $156,474.19 | $342,810 | $9,727 |
