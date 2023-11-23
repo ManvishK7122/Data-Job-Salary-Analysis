@@ -10,7 +10,7 @@ In 2021, Harvard Business Review published an article titled _Data Scientist: Th
 
 Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, my objective is to look into 3 specific roles within the Data Science Job Family, which are
 1. Data Analyst or any non-lead/managerial analyst role(Quality Analyst, Financial Data Analyst, etc.)
-2. Data Scientist or any non-lead/managerial scientist role (Machine Learning, Applied Scientist, etc.)
+2. Data Scientist or any non-lead/managerial scientist role (Machine Learning Scientist, Applied Scientist, etc.)
 3. Data Engineer or any non-lead/managerial engineer role(BI Engineer, Analyst Engineer, etc.)
 
 Along with the job roles that I will be analyzing, the fields within our dataset include:
