@@ -91,7 +91,7 @@ RENAME COLUMN remote_ratio TO Remoteness
    - Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average than the other types of conditions?
       - This is done for the different levels of experience/job families (Intermediate Level Scientists, Senior Level Engineers, etc.)
 6. In comparison to the average salary of the job role, does jobs that have higher than average salaries still have the same conditions that pay the higher salaries in the other roles and experience levels?
-    - Does the level of remoteness and size of company change with these roles iat higher experience levels?
+    - Does the level of remoteness and size of company change with these roles at higher experience levels?
 
 ### Interesting/Example Queries
 
@@ -180,12 +180,70 @@ ORDER BY avg_salary_remoteness DESC
 SELECT *
 FROM analyst_sal
 WHERE avg_salary_remoteness >
-  (SELECT ROUND(AVG (salary_in_usd) OVER(),2) AS avg_sal_eng
+  (SELECT ROUND(AVG (salary_in_usd) OVER(),2) AS avg_sal_ana
   FROM salary
   WHERE job_title LIKE "% Analyst")
 																		
 AND number_of_entries >= 3
 ```
 
+## Final Thoughts/Conclusions
 
+### Insights
 
+- When looking at the distribution of employees at different sized companies across the job families, the majority of our entries in our dataset are skewed towards individuals working in medium-sized companies with each job family having roughly 80% of their entries in that company size.
+  - Here are each of the distributions:
+1. Analysts
+  
+| Company Size  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Large  | 70  | 684 | 10.23% |
+| Medium  | 589  | 684 | 86.11% |
+| Small  | 25  | 684 | 3.65% |
+
+2. Scientists
+
+| Company Size  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Large  | 176 | 1063 | 16.56% |
+| Medium  | 837  | 1063 | 78.74% |
+| Small  | 50  | 1063 | 4.70% |
+
+3. Engineers
+
+| Company Size  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Large  | 147 | 1640 | 8.96% |
+| Medium  | 1437  | 1640 | 87.62% |
+| Small  | 56  | 1640 | 3.41% |
+
+- The distribution of employees across the experience levels is primarily senior level and partially at the intermiediate/mid experience level. Across these two levels of experience, the categories together total to around 80-90% of the distribution with the entry level roles being around 7-11% of the distribution and the rest being in the executive level of experience.
+  - Here are the distributions across the experience levels
+1. Analysts
+
+| Experience Level  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Entry  | 81 | 684 | 11.84% |
+| Executive  | 4  | 684 | 0.58% |
+| Intermediate  | 197 | 684 | 28.80% |
+| Large  |  402 | 684 | 58.77% |
+
+2. Scientists
+
+| Experience Level  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Entry  | 88 | 1063 | 8.28% |
+| Executive  | 17 | 1063 | 1.60% |
+| Intermediate  | 213 | 1063 | 20.04% |
+| Large  |  745 | 1063 | 70.08% |
+
+3. Engineers
+
+| Experience Level  | # of employees | Total employees | Percent Total |
+| ------------- | ------------- | ------------- | ------------- |
+| Entry  | 121 | 1640 | 7.38% |
+| Executive  | 60 | 1640 | 3.66% |
+| Intermediate  | 336 | 1640 | 20.49% |
+| Large  |  1123 | 1640 | 68.48% |
+
+- 
