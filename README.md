@@ -226,7 +226,7 @@ AND number_of_entries >= 3
 | Entry  | 81 | 684 | 11.84% |
 | Executive  | 4  | 684 | 0.58% |
 | Intermediate  | 197 | 684 | 28.80% |
-| Large  |  402 | 684 | 58.77% |
+| Senior  |  402 | 684 | 58.77% |
 
 2. Scientists
 
@@ -235,7 +235,7 @@ AND number_of_entries >= 3
 | Entry  | 88 | 1063 | 8.28% |
 | Executive  | 17 | 1063 | 1.60% |
 | Intermediate  | 213 | 1063 | 20.04% |
-| Large  |  745 | 1063 | 70.08% |
+| Senior  |  745 | 1063 | 70.08% |
 
 3. Engineers
 
@@ -244,7 +244,7 @@ AND number_of_entries >= 3
 | Entry  | 121 | 1640 | 7.38% |
 | Executive  | 60 | 1640 | 3.66% |
 | Intermediate  | 336 | 1640 | 20.49% |
-| Large  |  1123 | 1640 | 68.48% |
+| Senior  |  1123 | 1640 | 68.48% |
 
 - In terms of the trend in the salaries and demand for individuals in the big data job field from 2020 to 2023, the average salary and maximum salary has increased over time, which means that overall demand for data jobs are increasing. Although different trends are shown across the job families, the overall trend is the increase in demand for these data jobs.
   - Here are the average, maximum, and minimum salaries at each job role
