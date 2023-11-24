@@ -266,7 +266,7 @@ AND number_of_entries >= 3
 | 2022  | $137,767.12 | $380,000 | $8,000 |
 | 2023  | $161,823.07 | $423,834 | $9,727 |
 
--Something to note about the data scientist roles is that there is a slight decrease in the average salary in 2021, however, we still proceed to see the increase in average salary till 2023. 
+- Something to note about the data scientist roles is that there is a slight decrease in the average salary in 2021, however, we still proceed to see the increase in average salary till 2023. 
 
 3. Engineers
 
@@ -277,7 +277,7 @@ AND number_of_entries >= 3
 | 2022  | $139,642.03 | $375,000 | $8,000 |
 | 2023  | $156,474.19 | $342,810 | $9,727 |
 
-- When looking at the amount of employees that work at different levels of remoteness, the majority of the distribution are either on-site or fully remote roles across the different job families.
+- When looking at the amount of employees that work at different levels of remoteness, the majority of the distribution is either on-site or fully remote roles across the different job families.
   - Here are the distributions of people working in each type of remoteness level
 
 1. Analysts
@@ -303,4 +303,50 @@ AND number_of_entries >= 3
 | On-site  | 883 | $150,760.26 | $342,810 | $5,882 |
 | Remote  | 700 | $141,679.48 | $375,000 | $5,132 |
 | Hybrid  | 57 | $80,113.7 | $250,000 | $7,500 |
+
+- Across the different experience levels and job families, the companies that have the highest average pay are medium sized companies and occationally larger/corporations at certain experience levels. When looking into what level of remoteness has the highest average salary usually on-site and fully remote jobs pay the highest which confirms the previous insight.
+
+***Analysts***
+
+1. Entry Level Analysts 
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| Hybrid  | Small | 2 | $90,202.00 | 
+| Remote  | Medium | 21 | $69,340.90 |
+| On-site  | Medium | 13 | $64,958.54 |
+
+- Something to note and I found interesting is that there are only 2 employees who were Hybrid Analysts at small sized companies, so it can be seen as not enough data and evidence to concretely conclude the fact that they have the highest average salary.  
+
+2. Mid/Intermediate Level Analysts
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Medium | 115 | $111,422.22 | 
+| Hybrid  | Medium | 2 | $85,161.50 |
+| Remote  | Medium | 45 | $84,061.91 |
+
+- Similar to the entry level positions, the hybrid analysts and medium sized companies have one of the highest average salaries in the group however, there are a lack of number of employees in the category to confirm this insight.
+
+3. Senior Level Analysts
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| Remote  | Large | 5 | $145,930.80 | 
+| On-site  | Large | 3 | $140,700.00 |
+| On-site  | Medium | 204 | $121,357.82 |
+
+4. Executive Level Analysts
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| Remote  | Large | 1 | $150,000.00 | 
+| Remote  | Medium | 2 | $120,000.00 |
+| On-site  | Medium | 1 | $15,000.0 |
+
+- When looking at the executive level analysts, I believe that there is a lack employees within each field to concrete conclude that certain company sizes and levels of remoteness pay the highest salaries on average.
+  - Along with the lack of entries, there is also a massive gap between the remote analysts and on-site analysts at medium sized companies.
+    - Since the reasons mentioned above this data could be seen as an inaccurate representation of the executive level analysts salaries.
+   
+***Scientists***
 
