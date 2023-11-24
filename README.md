@@ -247,7 +247,7 @@ AND number_of_entries >= 3
 | Large  |  1123 | 1640 | 68.48% |
 
 - In terms of the trend in the salaries and demand for individuals in the big data job field from 2020 to 2023, the average salary and maximum salary has increased over time, which means that overall demand for data jobs are increasing. Although different trends are shown across the job families, the overall trend is the increase in demand for these data jobs.
-- Here are the average, maximum, and minimum salaries at each job role
+  - Here are the average, maximum, and minimum salaries at each job role
 1. Analysts
 
 | Work Year  | Average Salary | Maximum Salary | Minimum Salary |
@@ -276,3 +276,31 @@ AND number_of_entries >= 3
 | 2021  | $90,031.4 | $276,000 | $5,679 |
 | 2022  | $139,642.03 | $375,000 | $8,000 |
 | 2023  | $156,474.19 | $342,810 | $9,727 |
+
+- When looking at the amount of employees that work at different levels of remoteness, the majority of the distribution are either on-site or fully remote roles across the different job families.
+  - Here are the distributions of people working in each type of remoteness level
+
+1. Analysts
+
+| Remoteness  | # of employees | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| On-site  | 347 | $113,627.62 | $430,967 | $6,072 |
+| Remote  | 307 | $101,50.99 | $250,000 | $5,723 |
+| Hybrid  | 30 | $52,278.63 | $125,404 | $8,000 |
+
+2. Scientists
+
+| Remoteness  | # of employees | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| On-site  | 522 | $151,904.42 | $450,000 | $9,466 |
+| Remote  | 471 | $146,520.79 | $416,000 | $5,679 |
+| Hybrid  | 70 | $77,854.46 | $423,000 | $12,000 |
+
+3. Engineers
+
+| Remoteness  | # of employees | Average Salary | Maximum Salary | Minimum Salary |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| On-site  | 883 | $150,760.26 | $342,810 | $5,882 |
+| Remote  | 700 | $141,679.48 | $375,000 | $5,132 |
+| Hybrid  | 57 | $80,113.7 | $250,000 | $7,500 |
+
