@@ -377,7 +377,7 @@ AND number_of_entries >= 3
 | On-site  | Small | 2 | $175,618.50 |
 | Remote  | Medium | 300 | $167,965.91 |
 
-Similar to the entry-level analysts, there are only 2 entries for on-site scientists at small companies, so this can be seen as not enough concrete evidence to conclude their average salary. If not including these entries, then the next highest average salary would be on-site scientists at medium sized companies with an average salary of $159,940.17. 
+- Similar to the entry-level analysts, there are only 2 entries for on-site scientists at small companies, so this can be seen as not enough concrete evidence to conclude their average salary. If not including these entries, then the next highest average salary would be on-site scientists at medium sized companies with an average salary of $159,940.17. 
 
 4. Executive Level Scientists
 
@@ -399,7 +399,7 @@ Similar to the entry-level analysts, there are only 2 entries for on-site scient
 | On-site  | Small | 1 | $108,000.0|
 | Hybrid  | Large | 7 | $98,946.43 |
 
-Among entry level engineers there is only one entry so the next highest average salary would be remote engineers at small sized companies with an average salary of $74,633.42.
+- Among entry level engineers there is only one entry so the next highest average salary would be remote engineers at small sized companies with an average salary of $74,633.42.
 
 2. Mid/Intermediate Level Engineers
 
