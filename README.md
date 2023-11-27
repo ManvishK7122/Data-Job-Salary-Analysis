@@ -387,6 +387,8 @@ Similar to the entry-level analysts, there are only 2 entries for on-site scient
 | On-site  | Medium | 10 | $187,875.00 |
 | Remote  | Medium | 2 | $144,500.00 |
 
+- Compared to the executive level analysts, there are more executive level employees among the scientist roles. Although compared to the other levels of experience, it is still quite difficult to deduce if this is entirely accurate, however, this does give a better esitmation in companrison to the analysts. 
+
 ***Engineers***
 
 1. Entry Level Engineers
@@ -396,6 +398,8 @@ Similar to the entry-level analysts, there are only 2 entries for on-site scient
 | On-site  | Medium | 53 | $126,661.91 | 
 | On-site  | Small | 1 | $108,000.0|
 | Hybrid  | Large | 7 | $98,946.43 |
+
+Among entry level engineers there is only one entry so the next highest average salary would be remote engineers at small sized companies with an average salary of $74,633.42.
 
 2. Mid/Intermediate Level Engineers
 
@@ -420,5 +424,7 @@ Similar to the entry-level analysts, there are only 2 entries for on-site scient
 | Remote  | Medium | 36 | $227,945.44 | 
 | On-site  | Medium | 22 | $173,686.36 |
 | Remote  | Small | 1 | $115,222.00 |
+
+Among our executive level engineers, the majority of our entries are distributed between remote and on-site engineers at medium sized companies. However, the amount of entries is abundant enough to make concrete conclusions on the average salaries across levels of remoteness and different company sizes. 
 
 
