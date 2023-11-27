@@ -305,6 +305,7 @@ AND number_of_entries >= 3
 | Hybrid  | 57 | $80,113.7 | $250,000 | $7,500 |
 
 - Across the different experience levels and job families, the companies that have the highest average pay are medium sized companies and occationally larger/corporations at certain experience levels. When looking into what level of remoteness has the highest average salary usually on-site and fully remote jobs pay the highest which confirms the previous insight.
+  - Here are the top 3 average salaries for each of the conditions.
 
 ***Analysts***
 
@@ -344,9 +345,75 @@ AND number_of_entries >= 3
 | Remote  | Medium | 2 | $120,000.00 |
 | On-site  | Medium | 1 | $15,000.0 |
 
-- When looking at the executive level analysts, I believe that there is a lack employees within each field to concrete conclude that certain company sizes and levels of remoteness pay the highest salaries on average.
+- When looking at the executive level analysts, I believe that there is a lack employees within each field to concretely conclude that certain company sizes and levels of remoteness pay the highest salaries on average.
   - Along with the lack of entries, there is also a massive gap between the remote analysts and on-site analysts at medium sized companies.
     - Since the reasons mentioned above this data could be seen as an inaccurate representation of the executive level analysts salaries.
    
 ***Scientists***
+
+1. Entry Level Scientists
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Large | 10 | $130,590.40 | 
+| On-site  | Medium | 16 | $106,779.00|
+| Hybrid  | Large | 11 | $79,632.09 |
+
+2. Mid/Intermediate Level Scientists
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Medium | 70 | $118,588.80 | 
+| Remote  | Medium | 58 | $114,117.64|
+| Hybrid  | Large | 20 | $100,541.75 |
+
+3. Senior Level Scientists
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Large | 51 | $180,745.82 | 
+| On-site  | Small | 2 | $175,618.50 |
+| Remote  | Medium | 300 | $167,965.91 |
+
+4. Executive Level Scientists
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| Remote  | Small | 4 | $249,000.00 | 
+| On-site  | Medium | 10 | $187,875.00 |
+| Remote  | Medium | 2 | $144,500.00 |
+
+***Engineers***
+
+1. Entry Level Engineers
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Medium | 53 | $126,661.91 | 
+| On-site  | Small | 1 | $108,000.0|
+| Hybrid  | Large | 7 | $98,946.43 |
+
+2. Mid/Intermediate Level Engineers
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Medium | 147 | $129,016.65 | 
+| Remote  | Large | 25 | $111,521.56 |
+| Remote  | Medium | 124 | $97,392.41 |
+
+3. Senior Level Engineers
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| On-site  | Large | 27 | $173,172.26 | 
+| Remote  | Medium | 402 | $162,259.08 |
+| On-site  | Medium | 623 | $158,096.48 |
+
+4. Executive Level Engineers
+
+| Remoteness  | Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- |
+| Remote  | Medium | 36 | $227,945.44 | 
+| On-site  | Medium | 22 | $173,686.36 |
+| Remote  | Small | 1 | $115,222.00 |
 
