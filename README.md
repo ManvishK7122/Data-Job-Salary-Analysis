@@ -425,6 +425,7 @@ Among entry level engineers there is only one entry so the next highest average 
 | On-site  | Medium | 22 | $173,686.36 |
 | Remote  | Small | 1 | $115,222.00 |
 
-Among our executive level engineers, the majority of our entries are distributed between remote and on-site engineers at medium sized companies. However, the amount of entries is abundant enough to make concrete conclusions on the average salaries across levels of remoteness and different company sizes. 
+- Among our executive level engineers, the majority of our entries are distributed between remote and on-site engineers at medium sized companies. However, the amount of entries is abundant enough to make concrete conclusions on the average salaries across levels of remoteness and different company sizes.
+  - This cannot be stated however for remote engineers at small sized companies. 
 
 
