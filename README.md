@@ -317,7 +317,7 @@ AND number_of_entries >= 3
 | Remote  | Medium | 21 | $69,340.90 |
 | On-site  | Medium | 13 | $64,958.54 |
 
-- Something to note and I found interesting is that there are only 2 employees who were Hybrid Analysts at small sized companies, so it can be seen as not enough data and evidence to concretely conclude the fact that they have the highest average salary.  
+- Something to note and I found interesting is that there are only 2 employees who were Hybrid Analysts at small sized companies, so it could be seen as not enough data and evidence to concretely conclude the fact that they have the highest average salary.  
 
 2. Mid/Intermediate Level Analysts
 
@@ -327,7 +327,7 @@ AND number_of_entries >= 3
 | Hybrid  | Medium | 2 | $85,161.50 |
 | Remote  | Medium | 45 | $84,061.91 |
 
-- Similar to the entry level positions, the hybrid analysts and medium sized companies have one of the highest average salaries in the group however, there are a lack of number of employees in the category to confirm this insight.
+- Similar to the entry level positions, the hybrid analysts and medium sized companies have one of the highest average salaries in the group however, there are a lack of number of employees in the category to confirm this insight. The next highest average salary would be fully remote analysts at large companies with an average salary of $80,635.86. 
 
 3. Senior Level Analysts
 
@@ -359,6 +359,8 @@ AND number_of_entries >= 3
 | On-site  | Medium | 16 | $106,779.00|
 | Hybrid  | Large | 11 | $79,632.09 |
 
+- Something to note for entry level scientists is the gap between the on-site roles at a medium sized company and the hybrid role at a large company. The difference is substantial with almost a $30k difference in salary compared to on-site analysts at medium sized companies.
+
 2. Mid/Intermediate Level Scientists
 
 | Remoteness  | Company Size | Number of employees | Average Salary | 
@@ -374,6 +376,8 @@ AND number_of_entries >= 3
 | On-site  | Large | 51 | $180,745.82 | 
 | On-site  | Small | 2 | $175,618.50 |
 | Remote  | Medium | 300 | $167,965.91 |
+
+Similar to the entry-level analysts, there are only 2 entries for on-site scientists at small companies, so this can be seen as not enough concrete evidence to conclude their average salary. If not including these entries, then the next highest average salary would be on-site scientists at medium sized companies with an average salary of $159,940.17. 
 
 4. Executive Level Scientists
 
@@ -416,4 +420,5 @@ AND number_of_entries >= 3
 | Remote  | Medium | 36 | $227,945.44 | 
 | On-site  | Medium | 22 | $173,686.36 |
 | Remote  | Small | 1 | $115,222.00 |
+
 
