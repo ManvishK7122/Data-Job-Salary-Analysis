@@ -187,7 +187,7 @@ WHERE avg_salary_remoteness >
 AND number_of_entries >= 3
 ```
 
-## Final Thoughts/Conclusions
+## Findings/Insights
 
 ### Insights
 
