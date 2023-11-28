@@ -495,5 +495,15 @@ Here are my recommendations for the working conditions(Level of remoteness and c
 **Scientists**
 
 1. Entry Level
-- 
+- **On-site** positions at **Large** sized companies 
+2. Mid/Intermediate Level
+- **On-site** positions at **Medium** sized companies
+3. Senior Level
+- **On-site** positions at **Large** sized companies
+4. Executive Level
+- Compared to the executive level analysts there are more entries within executive level scientist, it would be still hard to conclude a definitive pattern although much more concrete then the analyst job family.
+  - Using the data entries given, look for **Remote** positions at **Small** sized companies
+ 
+**Engineeers**
 
+1. Entry Level
