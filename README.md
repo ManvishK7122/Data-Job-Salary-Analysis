@@ -426,6 +426,21 @@ AND number_of_entries >= 3
 | Remote  | Small | 1 | $115,222.00 |
 
 - Among our executive level engineers, the majority of our entries are distributed between remote and on-site engineers at medium sized companies. However, the amount of entries is abundant enough to make concrete conclusions on the average salaries across levels of remoteness and different company sizes.
-  - This cannot be stated however for remote engineers at small sized companies. 
+  - This cannot be stated however for remote engineers at small sized companies.
+ 
+- From our previous insight, medium and larged sized companies tend to pay the on-site and fully remote roles the highest average salary compared to the other circumstances. To confirm and make sure that this insight is concrete, is the same pattern shown when looking at the circumstances that pay higher than average salaries across the 3 job classes?
+  - This table is shown across different levels of experience and aims to confirm the previous insight for each level of job role within the family. Along with this to ensure we have concrete evidence, I made sure to only include categories with more than 3 individuals in the category.
+ 
+***Analysts***
+| Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Remote | Senior | Large | 5 |	145930.8 |
+On-site	Senior	Large	3	140700.0
+On-site	Senior	Medium	204	121357.82
+Remote	Senior	Medium	180	117444.87
+On-site	Intermediate	Medium	115	111422.22
+Remote	Senior	Small	8	106350.75
+
+
 
 
