@@ -450,9 +450,19 @@ AND number_of_entries >= 3
 | On-site | Executive | Medium | 10 | $187,875.00 |
 | On-site | Senior | Large | 51 | $180,745.82 |
 | Remote | Senior | Medium | 300 | $167,965.91 |
-| On-site | Senior | Medium | 344 | $159,940.17 |
+| On-site | Senior | Medium | 344| $159,940.17 |
 | Remote | Senior | Large | 31 | $155,135.87 |
 
+***Engineers***
 
+| Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Remote | Executive | Medium | 36 | $227,945.44 |
+| On-site | Executive | Medium | 22 | $173,686.36 |
+| On-site | Senior | Large | 27 | $173,172.26 |
+| Remote | Senior | Medium | 402 | $162,259.08 |
+| On-site | Senior | Medium | 623 | $158,096.48 |
+| Remote | Senior | Large | 37 | $150,560.14 |
 
+- From the tables above, the statement is still true that on-site and fully remote roles at medium and larged sized companies tend to issue the highest average salary across the job types. 
 
