@@ -82,7 +82,7 @@ RENAME COLUMN remote_ratio TO Remoteness
 
 ## Data Analysis/Questions
 
-### Questions/Exploratory Data Analysis
+### Questions/Exploratory Data Analysis(EDA)
 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and the percent total of each company size?
 2. When looking at the different levels of experience level within our job families, how many individuals fall under each experience level(Entry, Intermediate, Etc.)?
 3. Throughout the years our dataset covers (2020-2023), What is the general trend in terms of demand and their respective pay across our 3 job families?
@@ -468,8 +468,14 @@ AND number_of_entries >= 3
 
 ## Conclusions
 
-### Summary/EDA insights
+### Summary/EDA Conclusion
 
-- Across our 3 job roles, the distribution of employees within each size of company is heavily skewed towards **Medium** sized companies.
-- When looking at the distribution of employees across the different levels of experience, the majority of employees are primarily senior level positions and mid/intermediate level after.
-- When looking at Harvards statement towards the demand of 
+- Across our 3 job families, the distribution of employees within each size of company is heavily skewed towards **Medium** sized companies.
+- When looking at the distribution of employees across the different levels of experience, the majority of employees are **primarily Senior** level positions and **Mid/Intermediate** level after.
+- In retrospect to Harvard's statement towards the demand of big data jobs increasing, the **increase in average salary** across the years observed (2020-2023) proves that the demand for these big data jobs are continuing to rise.
+  - This statement is true across the 3 different job families explored in this study.
+- Observing the distribution of employees across the different levels of remoteness, the dataset's level of employeement is heavily skewed towards **On-site** and **Remote** roles across the job families.
+
+### Recommendations 
+
+
