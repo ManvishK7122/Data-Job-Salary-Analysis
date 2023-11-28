@@ -432,6 +432,7 @@ AND number_of_entries >= 3
   - This table is shown across different levels of experience and aims to confirm the previous insight for each level of job role within the family. Along with this to ensure we have concrete evidence, I made sure to only include categories with more than 3 individuals in the category.
  
 ***Analysts***
+
 | Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Remote | Senior | Large | 5 |	$145,930.80 |
@@ -440,6 +441,17 @@ AND number_of_entries >= 3
 | Remote | Senior | Medium | 180 | $117,444.87 |
 | On-site | Intermediate | Medium | 115| $111,422.22 |
 | Remote | Senior | Small | 8 |	$106,350.75 |
+
+***Scientists***
+
+| Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Remote | Executive | Small | 4 | $249,000.00 |
+| On-site | Executive | Medium | 10 | $187,875.00 |
+| On-site | Senior | Large | 51 | $180,745.82 |
+| Remote | Senior | Medium | 300 | $167,965.91 |
+| On-site | Senior | Medium | 344 | $159,940.17 |
+| Remote | Senior | Large | 31 | $155,135.87 |
 
 
 
