@@ -466,3 +466,10 @@ AND number_of_entries >= 3
 
 - From the tables above, the statement is still true that on-site and fully remote roles at medium and larged sized companies tend to issue the highest average salary across the job types. 
 
+## Conclusions
+
+### Summary/EDA insights
+
+- Across our 3 job roles, the distribution of employees within each size of company is heavily skewed towards **Medium** sized companies.
+- When looking at the distribution of employees across the different levels of experience, the majority of employees are primarily senior level positions and mid/intermediate level after.
+- When looking at Harvards statement towards the demand of 
