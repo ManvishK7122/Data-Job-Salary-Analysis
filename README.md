@@ -4,7 +4,7 @@
 
 ### Background/Problem Statement
 
-In 2021, Harvard Business Review published an article titled _Data Scientist: The Sexiest Job of the 21st Century_. Within this article, the main topics discussed were how Big data jobs and jobs within that job family will have a boom and increase in demand due to how corporations see them as valuable assets when it comes to making business decisions. Through reading this article, I wanted to conduct a personal study/project about the job family by using data of salaries given to the job family from 2020 to 2023 and seeing if the statement made by the Harvard article was true. Another objective of this study was deducing what kind of factors affected their salary(Examples: Company Size and Level of Remoteness). 
+In 2021, Harvard Business Review published an article titled _Data Scientist: The Sexiest Job of the 21st Century_. Within this article, the main topics discussed were how Big data jobs and jobs within that job family will have a boom and increase in demand due to how corporations see them as valuable assets when it comes to making business decisions. Through reading this article, I wanted to conduct a personal study/project about the job family by using data of salaries given to the job family from 2020 to 2023 and seeing if the statement made by the Harvard article was true. Another objective of this study was deducing what kind of factors affected their salary(Examples: Company Size and Level of Remoteness) and providing recommendations in terms of highest average salary? 
 
 ### Fields/Preview
 
@@ -466,7 +466,7 @@ AND number_of_entries >= 3
 
 - From the tables above, the statement is still true that on-site and fully remote roles at medium and larged sized companies tend to issue the highest average salary across the job types. 
 
-## Conclusions
+## Conclusion/Recommendations
 
 ### Summary/EDA Conclusion
 
@@ -477,5 +477,12 @@ AND number_of_entries >= 3
 - Observing the distribution of employees across the different levels of remoteness, the dataset's level of employeement is heavily skewed towards **On-site** and **Remote** roles across the job families.
 
 ### Recommendations 
+
+Here are my recommendations for the working conditions(Level of remoteness and company size) across each job family and level of experience:
+
+**Analysts**
+
+1. Entry Level
+- Look for Hybrid positions at Small sized companies or Remote psotions at Medium sized companies
 
 
