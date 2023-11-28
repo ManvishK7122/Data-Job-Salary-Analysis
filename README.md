@@ -435,11 +435,11 @@ AND number_of_entries >= 3
 | Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Remote | Senior | Large | 5 |	145930.8 |
-On-site	Senior	Large	3	140700.0
-On-site	Senior	Medium	204	121357.82
-Remote	Senior	Medium	180	117444.87
-On-site	Intermediate	Medium	115	111422.22
-Remote	Senior	Small	8	106350.75
+| On-site | Senior | Large | 3 | 140700.0 |
+| On-site | Senior | Medium | 204 | 121357.82 |
+| Remote | Senior | Medium | 180 | 117444.87 |
+| On-site | Intermediate | Medium | 115| 111422.22 |
+| Remote | Senior | Small | 8 |	106350.75 |
 
 
 
