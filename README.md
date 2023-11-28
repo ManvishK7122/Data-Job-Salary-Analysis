@@ -483,6 +483,17 @@ Here are my recommendations for the working conditions(Level of remoteness and c
 **Analysts**
 
 1. Entry Level
-- Look for Hybrid positions at Small sized companies or Remote psotions at Medium sized companies
+- **Hybrid** positions at **Small** sized companies or **Remote** positions at **Medium** sized companies
+2. Mid/Intermediate Level
+- **On-site** positions at **Medium** sized companies
+3. Senior Level
+- **Remote** positions at **Large** sized companies
+4. Executive Level
+- Since there is a lack of entries within executive level analysts, it would be hard to conclude a definitive pattern.
+  - Using the data entries given, look for **Remote** positions at **Large** sized companies
 
+**Scientists**
+
+1. Entry Level
+- 
 
