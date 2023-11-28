@@ -507,3 +507,14 @@ Here are my recommendations for the working conditions(Level of remoteness and c
 **Engineeers**
 
 1. Entry Level
+- **On-site** positions at **Medium** sized companies
+2. Mid/Intermediate Level
+- **On-site** positions at **Large** sized companies
+3. Senior Level
+- **On-site** positions at **Large** sized companies
+4. Executive Level
+- **Remote** positions at **Medium** sized companies 
+
+When looking at this information, these recommendations and patterns are justified when observing the working conditions for the higher than the job family's average salary.
+
+### Final Thoughts
