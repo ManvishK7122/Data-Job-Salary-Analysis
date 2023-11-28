@@ -518,3 +518,8 @@ Here are my recommendations for the working conditions(Level of remoteness and c
 When looking at this information, these recommendations and patterns are justified when observing the working conditions for the higher than the job family's average salary.
 
 ### Final Thoughts
+
+When observing Harvard's statement about the big data jobs and their prospective growth within the technological industry, the job industry is in fact booming in demand due to their increase in salary since 2020 to 2023. When observing our dataset, the results infact changed my understanding of the industry and how different sizes of companies value certain job families and their level of demand. My initial impression and hypothesis was that large sized companies would infact offer the highest average salary due to their higher budget to hire individuals in this field. However, medium sized companies had competitive salaries in comparison to larger sized companies and at times offered higher salaries, which could imply higher levels of demand for these roles. Something that also surprised me when performing exploratory data analysis is the level of difference in salary between on-site and remote roles in comparison to the hybrid roles and their gap between both levels of remoteness. My initial thoughts were that fully remote roles would offer the highest average salary and hybrid roles offering the next highest level of salary, however, this as well altered my perception on the job market and the circumstances for average salaries across different levels of remoteness.  
+
+
+
