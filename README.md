@@ -434,12 +434,12 @@ AND number_of_entries >= 3
 ***Analysts***
 | Remoteness  | Experience Level |Company Size | Number of employees | Average Salary | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Remote | Senior | Large | 5 |	145930.8 |
-| On-site | Senior | Large | 3 | 140700.0 |
-| On-site | Senior | Medium | 204 | 121357.82 |
-| Remote | Senior | Medium | 180 | 117444.87 |
-| On-site | Intermediate | Medium | 115| 111422.22 |
-| Remote | Senior | Small | 8 |	106350.75 |
+| Remote | Senior | Large | 5 |	$145,930.80 |
+| On-site | Senior | Large | 3 | $140,700.00 |
+| On-site | Senior | Medium | 204 | $121,357.82 |
+| Remote | Senior | Medium | 180 | $117,444.87 |
+| On-site | Intermediate | Medium | 115| $111,422.22 |
+| Remote | Senior | Small | 8 |	$106,350.75 |
 
 
 
