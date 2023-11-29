@@ -8,7 +8,7 @@ In 2021, Harvard Business Review published an article titled _Data Scientist: Th
 
 ### Fields/Preview
 
-Within the Kaggle dataset regarding Data Job Salaries from 2020-2023, my objective is to look into 3 specific roles within the Data Science Job Family, which are
+Within the Kaggle dataset regarding [Data Job Salaries](https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023/data), my objective is to look into 3 specific roles within the Data Science Job Family, which are
 1. Data Analyst or any non-lead/managerial analyst role(Quality Analyst, Financial Data Analyst, etc.)
 2. Data Scientist or any non-lead/managerial scientist role (Machine Learning Scientist, Applied Scientist, etc.)
 3. Data Engineer or any non-lead/managerial engineer role(BI Engineer, Analyst Engineer, etc.)
@@ -31,7 +31,7 @@ Along with the job roles that I will be analyzing, the fields within our dataset
 - Large: 1000+ employees
 
 The fields that are going to be examined and analyzed through Advanced SQL querying are
-1. Salary in USD(KPI or metric of success)
+1. Salary in USD(KPI or metric of success for the demand of big data jobs)
 2. Work Year
 3. Experience Level
 4. Job Title
@@ -45,7 +45,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
   
 ### Skills Applied
 - CTE
-- Nest Queries
+- Nested Queries
 - Windows Function
 - Aggregation
 - SQL wildcard
@@ -76,8 +76,6 @@ RENAME COLUMN remote_ratio TO Remoteness
 ```
 
 - Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner.
-
-- Here is the dataset after all the data cleaning
 
 
 ## Data Analysis/Questions
@@ -525,7 +523,7 @@ When looking at this information, these recommendations and patterns are justifi
 
  Although these insights changed my perception on the big data job market, there are certain aspects of the dataset that could be expanded on and could provide an even higher level of insight. Something that can be included and expanded upon is the level of education with our dataset. When looking at the level of education, we can also quantify how much higher levels of education can affect the salaries across our job families providing an insight on whether achieving these levels of education can provide a return on investment for employees. 
   
-  Along with the level of education, something that could have seen changed about the dataset is the amount of employees within each category explored in the dataset. When looking at the dataset, most of the dataset's distribution of employees fell under certain conditions and even more so than others. An example of this is that the dataset's distribution of employees when observing the level of experience is heavily skewed to senior level jobs across the 3 datasets and there are many more examples of this observed in the EDA. Something that could improve and mitigate the level of distribution is taking an equivalent amount of employees in each category and distribute them to make the distribution equal across the categories without favoring one category over the other. An example of this would be having 33.3% of the dataset working at small sized companies, 33.3% working at medium sized companies, and 33.3% working at larger comapnies/corporations. This would us to get better proportionalty of the dataset, therefore, allowing for less skewed data. 
+  Along with the level of education, something that could have seen changed about the dataset is the amount of employees within each category explored in the dataset. When looking at the dataset, most of the dataset's distribution of employees fell under certain conditions and even more so than others. An example of this is that the dataset's distribution of employees when observing the level of experience is heavily skewed to senior level jobs across the 3 datasets and there are many more examples of this observed in the EDA. Something that could improve and mitigate the level of distribution is taking an equivalent amount of employees in each category and distribute them to make the distribution equal across the categories without favoring one category over the other. An example of this would be having 33.3% of the dataset working at small sized companies, 33.3% working at medium sized companies, and 33.3% working at larger comapnies/corporations. This would us to get better proportionality of the dataset, therefore, allowing for less skewed data. 
 
  After observing Harvard's statement about the big data jobs and their prospective growth within the technological industry, the job industry is in fact booming in demand due to their increase in salary since 2020 to 2023. 
 
