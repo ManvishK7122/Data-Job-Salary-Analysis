@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Applications/ProjectDB.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1502"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainSalary"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Salary" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="35"/><column index="2" value="63"/><column index="3" value="95"/><column index="4" value="101"/><column index="5" value="211"/><column index="6" value="55"/><column index="7" value="91"/><column index="8" value="80"/><column index="9" value="115"/><column index="10" value="75"/><column index="11" value="102"/><column index="12" value="81"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- Data Cleaning/Formating
+
+-- Queries
+
+UPDATE salary
+SET experience_level =&quot;Entry&quot;
+WHERE experience_level = &quot;EN&quot;
+
+UPDATE salary
+SET experience_level = &quot;Intermediate&quot;
+WHERE experience_level = &quot;MI&quot;
+
+UPDATE salary
+SET experience_level = &quot;Senior&quot;
+WHERE experience_level = &quot;SE&quot;
+
+UPDATE salary
+SET experience_level = &quot;Executive&quot;
+WHERE experience_level = &quot;EX&quot;
+
+UPDATE salary
+SET employment_type = &quot;Full Time&quot;
+WHERE employment_type = &quot;FT&quot;
+
+UPDATE salary
+SET employment_type = &quot;Freelance&quot;
+WHERE employment_type = &quot;FL&quot;
+
+UPDATE salary
+SET employment_type = &quot;Contract&quot;
+WHERE employment_type = &quot;CT&quot;
+
+UPDATE salary
+SET employment_type = &quot;Part Time&quot;
+WHERE employment_type = &quot;PT&quot;
+
+UPDATE salary
+SET remote_ratio = &quot;Remote&quot;
+WHERE remote_ratio = &quot;100&quot;
+
+UPDATE salary
+SET remote_ratio = &quot;Hybrid&quot;
+WHERE remote_ratio = &quot;50&quot;
+
+UPDATE salary
+SET remote_ratio = &quot;On-site&quot;
+WHERE remote_ratio = &quot;0&quot;
+
+UPDATE salary
+SET company_size = &quot;Small&quot;
+WHERE company_size = &quot;S&quot;
+
+UPDATE salary
+SET company_size = &quot;Medium&quot;
+WHERE company_size = &quot;M&quot;
+
+UPDATE salary
+SET company_size = &quot;Large&quot;
+WHERE company_size = &quot;L&quot;
+
+ALTER TABLE Salary
+RENAME COLUMN remote_ratio TO Remoteness
+
+</sql><sql name="SQL 16">-- 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and 
+--	the percent total of each company size?
+
+-- Analysts
+
+SELECT company_size,
+				COUNT(job_title) AS number_of_emp_company,
+				SUM(COUNT(job_title)) OVER() AS total_of_emp,
+				ROUND((COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER()),2) AS percent_total_of_emp
+FROM salary
+WHERE job_title LIKE &quot;% Analyst&quot; 
+GROUP BY company_size
+
+-- Scientists
+
+SELECT company_size,
+				COUNT(job_title) AS number_of_entries,
+				SUM(COUNT(job_title)) OVER() AS total_of_entries,
+				ROUND((COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER()),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE &quot;% Scientist&quot; 
+GROUP BY company_size
+
+-- Engineers
+
+SELECT company_size,
+				COUNT(job_title) AS number_of_entries,
+				SUM(COUNT(job_title)) OVER() AS total_of_entries,
+				ROUND((COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER()),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE &quot;% Engineer&quot; 
+GROUP BY company_size
+
+
+-- 2. When looking at the different levels of experience level within our job families, how many individuals fall under
+-- each experience level(Entry, Intermediate, Etc.)?
+
+-- Analysts
+
+SELECT experience_level,
+				COUNT(job_title) AS number_of_entries,
+				SUM(COUNT(job_title)) OVER() AS total_of_entries,
+				ROUND((COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER()),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE &quot;% Analyst&quot; 
+GROUP BY experience_level
+
+-- Scientists
+
+SELECT experience_level,
+				COUNT(job_title) AS number_of_entries,
+				SUM(COUNT(job_title)) OVER() AS total_of_entries,
+				ROUND(COUNT(job_title)* 100.0 / SUM(COUNT(job_title)) OVER(),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE &quot;% Scientist&quot; 
+GROUP BY experience_level
+
+-- Engineers 
+
+SELECT experience_level,
+				COUNT(job_title) AS number_of_entries,
+				SUM(COUNT(job_title)) OVER() AS total_of_entries,
+				ROUND(COUNT(job_title)* 100.0/ SUM(COUNT(job_title)) OVER(),2) AS percent_total
+FROM salary 
+WHERE job_title LIKE &quot;% Engineer&quot; 
+GROUP BY experience_level
+
+
+-- 3. Throughout the years our dataset covers (2020-2023), What is the general trend in terms of demand and their
+-- respective pay across our 3 job families?
+
+-- Dataset 
+
+SELECT DISTINCT work_year, ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_over_years
+FROM salary
+
+--Analysts
+
+SELECT DISTINCT work_year,
+						ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_analyst,
+						MAX(salary_in_usd) OVER(PARTITION BY work_year) AS max_sal_analyst,
+						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_analyst
+FROM salary
+WHERE job_title LIKE &quot;% Analyst&quot;
+
+
+--Scientists
+
+SELECT DISTINCT work_year,
+						ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_scientist,
+						MAX(salary_in_usd) OVER(PARTITION BY work_year) AS max_sal_scientist,
+						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_scientist
+FROM salary
+WHERE job_title LIKE &quot;% Scientist&quot; 
+
+--Engineers
+
+SELECT DISTINCT work_year,
+						ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_engineer,
+						MAX(salary_in_usd) OVER(PARTITION BY work_year) AS max_sal_engineer,
+						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_engineer
+FROM salary
+WHERE job_title LIKE &quot;% Engineer&quot; 
+</sql><sql name="SQL 22">-- 4.Within our dataset and job roles, what are the number of individuals under each of the different levels of 
+-- remoteness (Remote, Hybrid, On-site)?
+
+-- Analysts
+
+SELECT DISTINCT Remoteness, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot;
+ORDER BY avg_salary_remoteness DESC
+
+--Scientists
+
+SELECT DISTINCT Remoteness, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot;
+ORDER BY avg_salary_remoteness DESC
+
+-- Engineers
+
+SELECT DISTINCT Remoteness, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot;
+ORDER BY avg_salary_remoteness DESC</sql><sql name="SQL 17">-- 5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to 
+-- have the highest salaries?
+
+-- Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average 
+-- than the other types of conditions?
+
+-- This is done for the different levels of experience/job families (Intermediate Level Scientists, Senior Level Engineers, etc.)
+
+-- Analysts
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot; AND experience_level = &quot;Entry&quot; 
+ORDER BY avg_salary_remoteness DESC 
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot; AND experience_level = &quot;Intermediate&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot; AND experience_level = &quot;Senior&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot; AND experience_level = &quot;Executive&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+			
+</sql><sql name="SQL 18">
+-- Scientists
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot; AND experience_level = &quot;Entry&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot; AND experience_level = &quot;Intermediate&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot; AND experience_level = &quot;Senior&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot; AND experience_level = &quot;Executive&quot; 
+ORDER BY avg_salary_remoteness DESC
+</sql><sql name="SQL 19">--Engineers
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Entry&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Intermediate&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Senior&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+SELECT DISTINCT Remoteness,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Executive&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+
+
+
+
+
+</sql><sql name="SQL 20">-- 6. In comparison to the average salary of the job role, does jobs that have higher than average salaries still have 
+-- the same conditions that pay the higher salaries in the other roles and experience levels?
+
+-- Does the level of remoteness and size of company change with these roles at higher experience levels?
+
+
+-- Analysts
+
+WITH analyst_sal AS (
+
+SELECT DISTINCT Remoteness, experience_level,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size, experience_level),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Analyst&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+)
+
+SELECT *
+FROM analyst_sal
+WHERE avg_salary_remoteness &gt; (SELECT ROUND( AVG (salary_in_usd) OVER(),2) AS avg_sal_ana
+																		FROM salary
+																		WHERE job_title LIKE &quot;% Analyst&quot; )
+																		
+AND number_of_entries &gt;= 3
+
+-- Scientists
+
+WITH scientist_sal AS (
+
+SELECT DISTINCT Remoteness, experience_level,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size, experience_level),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Scientist&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+)
+
+SELECT *
+FROM scientist_sal
+WHERE avg_salary_remoteness &gt; (SELECT ROUND( AVG (salary_in_usd) OVER(),2) AS avg_sal_sci
+																		FROM salary
+																		WHERE job_title LIKE &quot;% Scientist&quot; )
+																		
+AND number_of_entries &gt;= 3
+
+
+-- Engineers
+
+WITH engineer_sal AS (
+
+SELECT DISTINCT Remoteness, experience_level,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS number_of_entries,
+										ROUND( AVG (salary_in_usd) 
+												OVER(PARTITION BY Remoteness,company_size, experience_level),2) AS avg_salary_remoteness,
+										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS max_salary_remoteness,
+										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size, experience_level) AS min_salary_remoteness
+FROM Salary
+WHERE job_title LIKE &quot;% Engineer&quot; 
+ORDER BY avg_salary_remoteness DESC
+
+)
+
+SELECT *
+FROM engineer_sal
+WHERE avg_salary_remoteness &gt; (SELECT ROUND( AVG (salary_in_usd) OVER(),2) AS avg_sal_eng
+																		FROM salary
+																		WHERE job_title LIKE &quot;% Engineer&quot; )
+																		
+AND number_of_entries &gt;= 3
+
+-- Similar to our analyst role, we see that the salaries that are above the average salary for the engineer job role are mainly on-site and remote roles at medium to large sized companies.
+-- With this information, we can come to a final conclusion about what kind of jobs tend to have the highest salaries when it comes to 
+-- experience level, level of remoteness, and company size of where they are employed. 
+</sql><sql name="SQL 21">-- Queries used in tableau
+
+-- SELECT DISTINCT Remoteness, experience_level,&quot;Engineer&quot; AS job_family,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
+-- 										ROUND( AVG (salary_in_usd) 
+-- 												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
+-- 										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
+-- 										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
+-- FROM Salary
+-- WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Executive&quot; 
+-- ORDER BY avg_salary_remoteness DESC 
+
+
+-- SELECT DISTINCT work_year, experience_level, &quot;Engineer&quot; AS job_family,
+-- 						ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_engineer,
+-- 						MAX(salary_in_usd) OVER(PARTITION BY work_year) AS max_sal_engineer,
+-- 						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_engineer
+-- FROM salary
+-- WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level=&quot;Executive&quot;</sql><current_tab id="6"/></tab_sql></sqlb_project>
