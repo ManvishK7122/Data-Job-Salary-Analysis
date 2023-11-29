@@ -42,7 +42,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 ### Tools Used
 - Excel: Data Entry
 - Sqlite: Data Cleaning & Querying
-- Tableau: Building Interactive Dashboard
+- Tableau: Building [Interactive Dashboard](https://public.tableau.com/app/profile/manvish.kollu/viz/DataSalaryDashboard/DataJobFamilySalaries?publish=yes)
   
 ### Skills Applied
 - CTE
