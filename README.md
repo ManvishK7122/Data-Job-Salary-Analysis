@@ -40,7 +40,7 @@ The fields that are going to be examined and analyzed through Advanced SQL query
 
 ### Tools Used
 - Excel: Data Entry
-- MYSQL: Data Cleaning & Querying
+- Sqlite: Data Cleaning & Querying
 - Tableau: Building Interactive Dashboard
   
 ### Skills Applied
