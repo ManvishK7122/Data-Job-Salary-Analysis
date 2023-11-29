@@ -1,4 +1,5 @@
-```CREATE TABLE "Salary" 
+```sql 
+CREATE TABLE "Salary" 
 ( "ID" INTEGER, "work_year" INTEGER,
  "experience_level" TEXT,
  "employment_type" TEXT, 
@@ -9,4 +10,5 @@
  "employee_residence" TEXT, 
  "Remoteness" INTEGER, 
  "company_location" TEXT, 
- "company_size" TEXT )```
+ "company_size" TEXT )
+```
