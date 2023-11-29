@@ -61,7 +61,9 @@ WHERE company_size = &quot;L&quot;
 ALTER TABLE Salary
 RENAME COLUMN remote_ratio TO Remoteness
 
-</sql><sql name="SQL 16">-- 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and 
+</sql><sql name="SQL 16">
+
+-- 1. Across our 3 job families, what is the distribution of individuals that work in the different sizes of companies and 
 --	the percent total of each company size?
 
 -- Analysts
@@ -164,7 +166,9 @@ SELECT DISTINCT work_year,
 						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_engineer
 FROM salary
 WHERE job_title LIKE &quot;% Engineer&quot; 
-</sql><sql name="SQL 22">-- 4.Within our dataset and job roles, what are the number of individuals under each of the different levels of 
+</sql><sql name="SQL 22">
+
+-- 4.Within our dataset and job roles, what are the number of individuals under each of the different levels of 
 -- remoteness (Remote, Hybrid, On-site)?
 
 -- Analysts
@@ -198,7 +202,9 @@ SELECT DISTINCT Remoteness, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness) A
 										MIN(salary_in_usd) OVER(PARTITION BY Remoteness) AS min_salary_remoteness
 FROM Salary
 WHERE job_title LIKE &quot;% Engineer&quot;
-ORDER BY avg_salary_remoteness DESC</sql><sql name="SQL 17">-- 5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to 
+ORDER BY avg_salary_remoteness DESC</sql><sql name="SQL 17">
+
+-- 5. Across the different experience levels and job families, what conditions (Level of remoteness and Company Size) tend to 
 -- have the highest salaries?
 
 -- Example: For Entry Level Analyst, hybrid analyst roles at a smaller companies tends to issue the higher salaries on average 
@@ -249,6 +255,7 @@ ORDER BY avg_salary_remoteness DESC
 
 			
 </sql><sql name="SQL 18">
+
 -- Scientists
 
 
@@ -289,7 +296,10 @@ SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY
 FROM Salary
 WHERE job_title LIKE &quot;% Scientist&quot; AND experience_level = &quot;Executive&quot; 
 ORDER BY avg_salary_remoteness DESC
-</sql><sql name="SQL 19">--Engineers
+
+</sql><sql name="SQL 19">
+
+--Engineers
 
 
 SELECT DISTINCT Remoteness, company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
@@ -336,7 +346,9 @@ ORDER BY avg_salary_remoteness DESC
 
 
 
-</sql><sql name="SQL 20">-- 6. In comparison to the average salary of the job role, does jobs that have higher than average salaries still have 
+</sql><sql name="SQL 20">
+
+-- 6. In comparison to the average salary of the job role, does jobs that have higher than average salaries still have 
 -- the same conditions that pay the higher salaries in the other roles and experience levels?
 
 -- Does the level of remoteness and size of company change with these roles at higher experience levels?
@@ -412,24 +424,4 @@ WHERE avg_salary_remoteness &gt; (SELECT ROUND( AVG (salary_in_usd) OVER(),2) AS
 																		
 AND number_of_entries &gt;= 3
 
--- Similar to our analyst role, we see that the salaries that are above the average salary for the engineer job role are mainly on-site and remote roles at medium to large sized companies.
--- With this information, we can come to a final conclusion about what kind of jobs tend to have the highest salaries when it comes to 
--- experience level, level of remoteness, and company size of where they are employed. 
-</sql><sql name="SQL 21">-- Queries used in tableau
 
--- SELECT DISTINCT Remoteness, experience_level,&quot;Engineer&quot; AS job_family,company_size, COUNT(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS number_of_entries,
--- 										ROUND( AVG (salary_in_usd) 
--- 												OVER(PARTITION BY Remoteness,company_size),2) AS avg_salary_remoteness,
--- 										MAX(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS max_salary_remoteness,
--- 										MIN(salary_in_usd) OVER(PARTITION BY Remoteness,company_size) AS min_salary_remoteness
--- FROM Salary
--- WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level = &quot;Executive&quot; 
--- ORDER BY avg_salary_remoteness DESC 
-
-
--- SELECT DISTINCT work_year, experience_level, &quot;Engineer&quot; AS job_family,
--- 						ROUND(AVG(salary_in_usd) OVER(PARTITION by work_year),2) AS avg_sal_engineer,
--- 						MAX(salary_in_usd) OVER(PARTITION BY work_year) AS max_sal_engineer,
--- 						MIN(salary_in_usd) OVER(PARTITION BY work_year) AS min_sal_engineer
--- FROM salary
--- WHERE job_title LIKE &quot;% Engineer&quot; AND experience_level=&quot;Executive&quot;</sql><current_tab id="6"/></tab_sql></sqlb_project>
