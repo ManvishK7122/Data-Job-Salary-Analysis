@@ -8,10 +8,10 @@ In 2021, Harvard Business Review published an article titled [_Data Scientist: T
 
 ### Fields/Preview
 
-Within the Kaggle dataset regarding [Data Job Salaries](https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023/data), my objective is to look into 3 specific roles within the Data Science Job Family, which are
-1. Data Analyst or any non-lead/managerial analyst role(Quality Analyst, Financial Data Analyst, etc.)
-2. Data Scientist or any non-lead/managerial scientist role (Machine Learning Scientist, Applied Scientist, etc.)
-3. Data Engineer or any non-lead/managerial engineer role(BI Engineer, Analyst Engineer, etc.)
+Within the Kaggle dataset regarding [Data Job Salaries](https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023/data), my objective is to look into 3 popular types of occupations within the Data Science Job Family, which are:
+1. Data Analysts or any non-lead/managerial analyst roles (Quality Analyst, Financial Data Analyst, etc.)
+2. Data Scientists or any non-lead/managerial scientist roles (Machine Learning Scientist, Applied Scientist, etc.)
+3. Data Engineers or any non-lead/managerial engineer roles (BI Engineer, Analyst Engineer, etc.)
 
 Along with the job roles that I will be analyzing, the fields within our dataset include:
 
@@ -32,11 +32,12 @@ Along with the job roles that I will be analyzing, the fields within our dataset
 
 The fields that are going to be examined and analyzed through Advanced SQL querying are
 1. Salary in USD(KPI or metric of success for the demand of big data jobs)
-2. Work Year
-3. Experience Level
-4. Job Title
-5. Remote Ratio
-6. Company Size
+- Note that we are not going to be using the "Salary" Field due to the salaries being in different currencies therefore being an improper measure.
+3. Work Year
+4. Experience Level
+5. Job Title
+6. Remote Ratio
+7. Company Size
 
 ### Tools Used
 - Excel: Data Entry
@@ -68,6 +69,7 @@ UPDATE salary
 SET experience_level = "Senior"
 WHERE experience_level = "SE"
 ```
+
 I proceeded to do this process for the experience_level, remote_ratio, employment_type, and company_size fields. Along with the renaming of values within the field, I also updated the name of the remote_ratio column into Remoteness. The query looked like this:
 
 ```sql
@@ -77,6 +79,7 @@ RENAME COLUMN remote_ratio TO Remoteness
 
 - Note that all the clarification and information about company size and employment type is confirmed by the discussion posts within the Kaggle Dataset by the owner.
 
+- In the db file in the repository, this is table is post data cleaning and with all the formating changes.
 
 ## Data Analysis/Questions
 
@@ -476,7 +479,7 @@ AND number_of_entries >= 3
 
 ### Recommendations 
 
-Here are my recommendations for the working conditions(Level of remoteness and company size) across each job family and level of experience:
+Here are my recommendations for the working conditions(Level of remoteness and company size) across each job family and level of experience using average salaries as a metric of success:
 
 **Analysts**
 
