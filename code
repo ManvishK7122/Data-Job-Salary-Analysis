@@ -12,3 +12,8 @@ CREATE TABLE "Salary"
  "company_location" TEXT, 
  "company_size" TEXT )
 ```
+```sql
+UPDATE salary
+SET remote_ratio = "Remote"
+WHERE remote_ratio = "100";
+```
